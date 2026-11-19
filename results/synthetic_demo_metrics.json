@@ -1,0 +1,744 @@
+{
+  "label": "SYNTHETIC DATA ONLY - not a measurement on real shoppers or on the course data",
+  "command": "PYTHONPATH=src python3 examples/run_synthetic_demo.py",
+  "protocol": {
+    "n_train": 5000,
+    "n_test": 1000,
+    "train_fraud_rate": 0.02,
+    "test_fraud_rate": 0.1,
+    "contamination": 0.15,
+    "k": 150
+  },
+  "environment": {
+    "python": "3.14.0",
+    "numpy": "2.4.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.8.0"
+  },
+  "configs": {
+    "default_if_kmeans": {
+      "detectors": [
+        "isolation_forest",
+        "kmeans_distance"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "runs": [
+        {
+          "seed": 0,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance"
+          ],
+          "n_features_used": 114,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6868222222222222,
+              "average_precision": 0.3213227090423049,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.35,
+              "recall_at_100": 0.35,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5848275862068966,
+                "under_priced": 0.49606349206349204,
+                "scan_pause": 0.9544444444444444
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.6723333333333332,
+              "average_precision": 0.2852719812077072,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2733333333333333,
+              "recall_at_150": 0.41,
+              "precision_at_100": 0.29,
+              "recall_at_100": 0.29,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5409578544061302,
+                "under_priced": 0.5230793650793651,
+                "scan_pause": 0.9232716049382717
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.6857111111111112,
+              "average_precision": 0.3251634956567132,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.33,
+              "recall_at_100": 0.33,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5800383141762452,
+                "under_priced": 0.49777777777777776,
+                "scan_pause": 0.9535493827160493
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.174,
+            "precision": 0.26436781609195403,
+            "recall": 0.46
+          },
+          "runtime_seconds": 98.96
+        },
+        {
+          "seed": 1,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance"
+          ],
+          "n_features_used": 112,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.5550777777777778,
+              "average_precision": 0.12677345013814056,
+              "prevalence": 0.1,
+              "precision_at_150": 0.14,
+              "recall_at_150": 0.21,
+              "precision_at_100": 0.15,
+              "recall_at_100": 0.15,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.4987987987987988,
+                "under_priced": 0.38515432098765434,
+                "scan_pause": 0.8587654320987654
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.5605,
+              "average_precision": 0.1531513633677274,
+              "prevalence": 0.1,
+              "precision_at_150": 0.15333333333333332,
+              "recall_at_150": 0.23,
+              "precision_at_100": 0.16,
+              "recall_at_100": 0.16,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5078678678678679,
+                "under_priced": 0.4176543209876543,
+                "scan_pause": 0.8230864197530864
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.5590666666666666,
+              "average_precision": 0.1453932771634947,
+              "prevalence": 0.1,
+              "precision_at_150": 0.13333333333333333,
+              "recall_at_150": 0.2,
+              "precision_at_100": 0.13,
+              "recall_at_100": 0.13,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5066666666666667,
+                "under_priced": 0.3865432098765432,
+                "scan_pause": 0.8609053497942387
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.15,
+            "precision": 0.13333333333333333,
+            "recall": 0.2
+          },
+          "runtime_seconds": 47.42
+        },
+        {
+          "seed": 2,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance"
+          ],
+          "n_features_used": 115,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6845,
+              "average_precision": 0.27186414808904963,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.34,
+              "recall_at_100": 0.34,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.585982905982906,
+                "under_priced": 0.5167063492063492,
+                "scan_pause": 0.9432996632996633
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.7025,
+              "average_precision": 0.3709860844933865,
+              "prevalence": 0.1,
+              "precision_at_150": 0.26666666666666666,
+              "recall_at_150": 0.4,
+              "precision_at_100": 0.37,
+              "recall_at_100": 0.37,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6090313390313391,
+                "under_priced": 0.5369444444444444,
+                "scan_pause": 0.9534343434343434
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.6946111111111111,
+              "average_precision": 0.3477183138786648,
+              "prevalence": 0.1,
+              "precision_at_150": 0.28,
+              "recall_at_150": 0.42,
+              "precision_at_100": 0.36,
+              "recall_at_100": 0.36,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5911680911680911,
+                "under_priced": 0.525079365079365,
+                "scan_pause": 0.9607070707070708
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.169,
+            "precision": 0.27218934911242604,
+            "recall": 0.46
+          },
+          "runtime_seconds": 49.12
+        },
+        {
+          "seed": 3,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance"
+          ],
+          "n_features_used": 107,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6890555555555555,
+              "average_precision": 0.2971228417336463,
+              "prevalence": 0.1,
+              "precision_at_150": 0.28,
+              "recall_at_150": 0.42,
+              "precision_at_100": 0.37,
+              "recall_at_100": 0.37,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6049549549549551,
+                "under_priced": 0.5488888888888889,
+                "scan_pause": 0.9341218637992832
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.6476999999999999,
+              "average_precision": 0.26477779494178055,
+              "prevalence": 0.1,
+              "precision_at_150": 0.22,
+              "recall_at_150": 0.33,
+              "precision_at_100": 0.26,
+              "recall_at_100": 0.26,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5657357357357358,
+                "under_priced": 0.5339583333333333,
+                "scan_pause": 0.8629390681003585
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.6809555555555556,
+              "average_precision": 0.2947001346397571,
+              "prevalence": 0.1,
+              "precision_at_150": 0.24,
+              "recall_at_150": 0.36,
+              "precision_at_100": 0.32,
+              "recall_at_100": 0.32,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5950450450450451,
+                "under_priced": 0.5473263888888888,
+                "scan_pause": 0.9214336917562724
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.164,
+            "precision": 0.23170731707317074,
+            "recall": 0.38
+          },
+          "runtime_seconds": 23.67
+        },
+        {
+          "seed": 4,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance"
+          ],
+          "n_features_used": 115,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6503666666666668,
+              "average_precision": 0.24049038300562064,
+              "prevalence": 0.1,
+              "precision_at_150": 0.26666666666666666,
+              "recall_at_150": 0.4,
+              "precision_at_100": 0.31,
+              "recall_at_100": 0.31,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5632974910394266,
+                "under_priced": 0.48967836257309943,
+                "scan_pause": 0.9344086021505376
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.6708000000000001,
+              "average_precision": 0.2881323719426589,
+              "prevalence": 0.1,
+              "precision_at_150": 0.24,
+              "recall_at_150": 0.36,
+              "precision_at_100": 0.3,
+              "recall_at_100": 0.3,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6059139784946237,
+                "under_priced": 0.5136257309941521,
+                "scan_pause": 0.9283512544802868
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.6591111111111111,
+              "average_precision": 0.27876259947977555,
+              "prevalence": 0.1,
+              "precision_at_150": 0.24666666666666667,
+              "recall_at_150": 0.37,
+              "precision_at_100": 0.32,
+              "recall_at_100": 0.32,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5794623655913979,
+                "under_priced": 0.49520467836257304,
+                "scan_pause": 0.9396774193548387
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.153,
+            "precision": 0.24836601307189543,
+            "recall": 0.38
+          },
+          "runtime_seconds": 46.34
+        }
+      ]
+    },
+    "all_sklearn_detectors": {
+      "detectors": [
+        "isolation_forest",
+        "kmeans_distance",
+        "mlp_autoencoder",
+        "lof",
+        "one_class_svm",
+        "gmm"
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": [
+        {
+          "seed": 0,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance",
+            "mlp_autoencoder",
+            "lof",
+            "one_class_svm",
+            "gmm"
+          ],
+          "n_features_used": 114,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6868222222222222,
+              "average_precision": 0.3213227090423049,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.35,
+              "recall_at_100": 0.35,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5848275862068966,
+                "under_priced": 0.49606349206349204,
+                "scan_pause": 0.9544444444444444
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.6723333333333332,
+              "average_precision": 0.2852719812077072,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2733333333333333,
+              "recall_at_150": 0.41,
+              "precision_at_100": 0.29,
+              "recall_at_100": 0.29,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5409578544061302,
+                "under_priced": 0.5230793650793651,
+                "scan_pause": 0.9232716049382717
+              }
+            },
+            "mlp_autoencoder": {
+              "roc_auc": 0.6962555555555555,
+              "average_precision": 0.2877924630211657,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.32,
+              "recall_at_100": 0.32,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5763218390804598,
+                "under_priced": 0.5564444444444445,
+                "scan_pause": 0.9287962962962963
+              }
+            },
+            "lof": {
+              "roc_auc": 0.6870444444444445,
+              "average_precision": 0.26387034780657054,
+              "prevalence": 0.1,
+              "precision_at_150": 0.28,
+              "recall_at_150": 0.42,
+              "precision_at_100": 0.32,
+              "recall_at_100": 0.32,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5439846743295018,
+                "under_priced": 0.5714285714285714,
+                "scan_pause": 0.9146913580246913
+              }
+            },
+            "one_class_svm": {
+              "roc_auc": 0.6664111111111112,
+              "average_precision": 0.286117252641846,
+              "prevalence": 0.1,
+              "precision_at_150": 0.26,
+              "recall_at_150": 0.39,
+              "precision_at_100": 0.3,
+              "recall_at_100": 0.3,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5294636015325671,
+                "under_priced": 0.5145079365079365,
+                "scan_pause": 0.9244135802469136
+              }
+            },
+            "gmm": {
+              "roc_auc": 0.6615777777777777,
+              "average_precision": 0.2876137882205887,
+              "prevalence": 0.1,
+              "precision_at_150": 0.26666666666666666,
+              "recall_at_150": 0.4,
+              "precision_at_100": 0.33,
+              "recall_at_100": 0.33,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5108045977011494,
+                "under_priced": 0.5109841269841269,
+                "scan_pause": 0.9294444444444444
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.6793111111111111,
+              "average_precision": 0.3066024052864591,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2733333333333333,
+              "recall_at_150": 0.41,
+              "precision_at_100": 0.33,
+              "recall_at_100": 0.33,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.554022988505747,
+                "under_priced": 0.5103492063492063,
+                "scan_pause": 0.9445061728395061
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.17,
+            "precision": 0.25882352941176473,
+            "recall": 0.44
+          },
+          "runtime_seconds": 69.4
+        },
+        {
+          "seed": 1,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance",
+            "mlp_autoencoder",
+            "lof",
+            "one_class_svm",
+            "gmm"
+          ],
+          "n_features_used": 112,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.5550777777777778,
+              "average_precision": 0.12677345013814056,
+              "prevalence": 0.1,
+              "precision_at_150": 0.14,
+              "recall_at_150": 0.21,
+              "precision_at_100": 0.15,
+              "recall_at_100": 0.15,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.4987987987987988,
+                "under_priced": 0.38515432098765434,
+                "scan_pause": 0.8587654320987654
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.5605,
+              "average_precision": 0.1531513633677274,
+              "prevalence": 0.1,
+              "precision_at_150": 0.15333333333333332,
+              "recall_at_150": 0.23,
+              "precision_at_100": 0.16,
+              "recall_at_100": 0.16,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5078678678678679,
+                "under_priced": 0.4176543209876543,
+                "scan_pause": 0.8230864197530864
+              }
+            },
+            "mlp_autoencoder": {
+              "roc_auc": 0.6049777777777777,
+              "average_precision": 0.1803353257936568,
+              "prevalence": 0.1,
+              "precision_at_150": 0.19333333333333333,
+              "recall_at_150": 0.29,
+              "precision_at_100": 0.22,
+              "recall_at_100": 0.22,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5368468468468469,
+                "under_priced": 0.4737345679012345,
+                "scan_pause": 0.8733333333333333
+              }
+            },
+            "lof": {
+              "roc_auc": 0.5938777777777777,
+              "average_precision": 0.16239735051156085,
+              "prevalence": 0.1,
+              "precision_at_150": 0.15333333333333332,
+              "recall_at_150": 0.23,
+              "precision_at_100": 0.19,
+              "recall_at_100": 0.19,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.533903903903904,
+                "under_priced": 0.4403086419753086,
+                "scan_pause": 0.8808230452674898
+              }
+            },
+            "one_class_svm": {
+              "roc_auc": 0.5778666666666666,
+              "average_precision": 0.17847891472073338,
+              "prevalence": 0.1,
+              "precision_at_150": 0.17333333333333334,
+              "recall_at_150": 0.26,
+              "precision_at_100": 0.17,
+              "recall_at_100": 0.17,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5103003003003004,
+                "under_priced": 0.397962962962963,
+                "scan_pause": 0.910329218106996
+              }
+            },
+            "gmm": {
+              "roc_auc": 0.6496444444444445,
+              "average_precision": 0.20477590430472326,
+              "prevalence": 0.1,
+              "precision_at_150": 0.22,
+              "recall_at_150": 0.33,
+              "precision_at_100": 0.22,
+              "recall_at_100": 0.22,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5697597597597598,
+                "under_priced": 0.5454320987654321,
+                "scan_pause": 0.8980658436213992
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.5894111111111111,
+              "average_precision": 0.1679990027474399,
+              "prevalence": 0.1,
+              "precision_at_150": 0.15333333333333332,
+              "recall_at_150": 0.23,
+              "precision_at_100": 0.18,
+              "recall_at_100": 0.18,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5286786786786787,
+                "under_priced": 0.413641975308642,
+                "scan_pause": 0.9069958847736626
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.143,
+            "precision": 0.15384615384615385,
+            "recall": 0.22
+          },
+          "runtime_seconds": 46.27
+        },
+        {
+          "seed": 2,
+          "n_train": 5000,
+          "n_test": 1000,
+          "train_fraud_rate": 0.02,
+          "test_fraud_rate": 0.1,
+          "contamination": 0.15,
+          "detectors": [
+            "isolation_forest",
+            "kmeans_distance",
+            "mlp_autoencoder",
+            "lof",
+            "one_class_svm",
+            "gmm"
+          ],
+          "n_features_used": 115,
+          "threshold_fitted_on": "train",
+          "methods": {
+            "isolation_forest": {
+              "roc_auc": 0.6845,
+              "average_precision": 0.27186414808904963,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.34,
+              "recall_at_100": 0.34,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.585982905982906,
+                "under_priced": 0.5167063492063492,
+                "scan_pause": 0.9432996632996633
+              }
+            },
+            "kmeans_distance": {
+              "roc_auc": 0.7025,
+              "average_precision": 0.3709860844933865,
+              "prevalence": 0.1,
+              "precision_at_150": 0.26666666666666666,
+              "recall_at_150": 0.4,
+              "precision_at_100": 0.37,
+              "recall_at_100": 0.37,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6090313390313391,
+                "under_priced": 0.5369444444444444,
+                "scan_pause": 0.9534343434343434
+              }
+            },
+            "mlp_autoencoder": {
+              "roc_auc": 0.7266111111111111,
+              "average_precision": 0.3860684463262774,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2866666666666667,
+              "recall_at_150": 0.43,
+              "precision_at_100": 0.39,
+              "recall_at_100": 0.39,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6307407407407407,
+                "under_priced": 0.5800396825396825,
+                "scan_pause": 0.9642760942760943
+              }
+            },
+            "lof": {
+              "roc_auc": 0.7055444444444445,
+              "average_precision": 0.32268408639095675,
+              "prevalence": 0.1,
+              "precision_at_150": 0.3,
+              "recall_at_150": 0.45,
+              "precision_at_100": 0.38,
+              "recall_at_100": 0.38,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.6419088319088319,
+                "under_priced": 0.5031349206349206,
+                "scan_pause": 0.9524915824915824
+              }
+            },
+            "one_class_svm": {
+              "roc_auc": 0.6969666666666665,
+              "average_precision": 0.368737032207329,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2733333333333333,
+              "recall_at_150": 0.41,
+              "precision_at_100": 0.36,
+              "recall_at_100": 0.36,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5779202279202279,
+                "under_priced": 0.5528571428571429,
+                "scan_pause": 0.95993265993266
+              }
+            },
+            "gmm": {
+              "roc_auc": 0.6918,
+              "average_precision": 0.3806692544867298,
+              "prevalence": 0.1,
+              "precision_at_150": 0.2733333333333333,
+              "recall_at_150": 0.41,
+              "precision_at_100": 0.38,
+              "recall_at_100": 0.38,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5913675213675214,
+                "under_priced": 0.5097222222222222,
+                "scan_pause": 0.964983164983165
+              }
+            },
+            "ensemble": {
+              "roc_auc": 0.7009666666666667,
+              "average_precision": 0.37590274873843477,
+              "prevalence": 0.1,
+              "precision_at_150": 0.28,
+              "recall_at_150": 0.42,
+              "precision_at_100": 0.36,
+              "recall_at_100": 0.36,
+              "auc_by_fraud_type": {
+                "skipped_scan": 0.5939316239316239,
+                "under_priced": 0.5363888888888888,
+                "scan_pause": 0.9671043771043771
+              }
+            }
+          },
+          "at_train_threshold": {
+            "flag_rate": 0.182,
+            "precision": 0.24175824175824176,
+            "recall": 0.44
+          },
+          "runtime_seconds": 46.62
+        }
+      ]
+    }
+  }
+}
