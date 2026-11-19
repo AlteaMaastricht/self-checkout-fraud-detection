@@ -63,3 +63,5 @@ Claude Code under the author's direction.
 
 ## Framing (18 Nov 2026)
 - The case-study framing was replaced by explicit individual / shared / teammates' contribution statements (author decision). See `CONTRIBUTIONS.md`.
+
+- `LICENSE` added (19 Nov 2026, author decision): MIT, copyright 2026 Arthur J. Maarschalkerweerd; README licence line updated.

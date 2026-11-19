@@ -251,4 +251,4 @@ What this shows:
   - The repository contains no personal data.
   - The synthetic generator does not sample from, and is not calibrated on, the course data.
   - If you apply this code to real shopper data, you are responsible for complying with data-protection law.
-- **License:** none chosen yet. The code includes shared team work; see [`docs/CONTRIBUTIONS.md`](docs/CONTRIBUTIONS.md).
+- **License:** MIT — see [`LICENSE`](LICENSE). Contributions are described in [`docs/CONTRIBUTIONS.md`](docs/CONTRIBUTIONS.md).
